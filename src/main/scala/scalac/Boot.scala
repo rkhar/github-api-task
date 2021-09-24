@@ -1,0 +1,5 @@
+package scalac
+
+object Boot {
+
+}
