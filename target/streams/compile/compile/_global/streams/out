@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/rkhar/Desktop/own/scalac-tech-task/src/main/scala/scalac/http/HttpClient.scala:123:20: value groupBy is not a member of scalac.domain.Contributor[0m
+[0m[[0m[31merror[0m] [0m[0m      contributors.groupBy(_.login).view.mapValues(_.map(_.contributions).sum).toMap.map(elem => User(elem._1, elem._2)).toList[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
