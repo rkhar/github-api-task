@@ -9,10 +9,16 @@ import akka.stream.scaladsl.{Flow, Sink, Source, SourceQueueWithComplete}
 import scala.concurrent.{ExecutionContext, Future, Promise}
 import scala.util.{Failure, Success, Try}
 
+/**
+ * abstract http client
+ *
+ */
 abstract class HttpClient(url: String, queueSize: Int)(implicit system: ActorSystem[Nothing], executionContext: ExecutionContext) {
+  // connection pool to certain http server
   val poolClientFlow: Flow[(HttpRequest, Promise[HttpResponse]), (Try[HttpResponse], Promise[HttpResponse]), Http.HostConnectionPool] =
     Http().cachedHostConnectionPoolHttps[Promise[HttpResponse]](url)
 
+  // enqueue all requests to the connection pool
   val queue: SourceQueueWithComplete[(HttpRequest, Promise[HttpResponse])] =
     Source.queue[(HttpRequest, Promise[HttpResponse])](queueSize, OverflowStrategy.dropNew)
       .via(poolClientFlow)

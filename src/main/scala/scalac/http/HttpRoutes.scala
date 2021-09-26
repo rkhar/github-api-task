@@ -4,14 +4,14 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
 import de.heikoseeberger.akkahttpcirce.FailFastCirceSupport._
 
-trait HttpRoutes extends HttpExceptionHandler with GithubRoutes {
+trait HttpRoutes extends GithubRoutes {
 
-  val routes: Route = Route.seal {
+  // main http routes
+  val routes: Route =
     concat(
       healthCheck(),
       githubRoutes
     )
-  }
 
   def healthCheck(): Route = path("healthcheck") {
     get {

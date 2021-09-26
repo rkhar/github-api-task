@@ -5,15 +5,16 @@ import akka.http.scaladsl.server.Route
 import de.heikoseeberger.akkahttpcirce.FailFastCirceSupport._
 import io.circe.generic.auto._
 
-trait GithubRoutes {
+trait GithubRoutes extends GithubHttpExceptionHandler {
 
   val githubClient: GithubClient
 
-  val githubRoutes: Route =
+  val githubRoutes: Route = Route.seal {
     concat(
       repos(),
       repoContributors(),
       orgContributors(),
+      hesp(),
       pathPrefix("v2") {
         concat(
           reposV2(),
@@ -28,6 +29,11 @@ trait GithubRoutes {
           orgContributorsV3())
       }
     )
+  }
+
+  def hesp(): Route = path("hesp") {
+    complete("ok")
+  }
 
   def repos(): Route = path("orgs" / Segment / "repos") { orgName =>
     complete(githubClient.getRepos(orgName))

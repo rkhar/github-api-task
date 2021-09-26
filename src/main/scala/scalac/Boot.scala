@@ -13,10 +13,10 @@ object Boot {
   implicit val executionContext: ExecutionContext = system.executionContext
 
   val config: Config = ConfigFactory.load()
+
   val githubUrl: String = config.getString("github.url")
   val githubSize: Int = config.getInt("github.queue_size")
   val githubToken: String = System.getenv(config.getString("github.token"))
-  println(s"githubToken: $githubToken")
 
   val host: String = config.getString("http-server.interface")
   val port: Int = config.getInt("http-server.port")
