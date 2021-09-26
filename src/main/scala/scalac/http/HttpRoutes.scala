@@ -2,26 +2,20 @@ package scalac.http
 
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
+import de.heikoseeberger.akkahttpcirce.FailFastCirceSupport._
 
-class HttpRoutes(override val httpClient: HttpClient) extends GithubRoutes {
-  val routes: Route = {
+trait HttpRoutes extends HttpExceptionHandler with GithubRoutes {
+
+  val routes: Route = Route.seal {
     concat(
       healthCheck(),
-      repos(),
-      reposV2(),
-      reposV3(),
-      repoContributors(),
-      repoContributorsV2(),
-      repoContributorsV3(),
-      orgContributors(),
-      orgContributorsV2(),
-      orgContributorsV3()
+      githubRoutes
     )
   }
 
   def healthCheck(): Route = path("healthcheck") {
     get {
-      complete("ok")
+      complete("sup")
     }
   }
 
