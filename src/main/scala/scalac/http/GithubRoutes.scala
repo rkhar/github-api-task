@@ -17,6 +17,7 @@ import akka.http.scaladsl.server.RequestContext
 import akka.http.scaladsl.server.RouteResult
 import akka.http.scaladsl.model.Uri
 import akka.http.scaladsl.server.directives.CachingDirectives._
+import scalac.domain.http.CacheSettings
 
 import scala.concurrent.duration._
 
@@ -24,6 +25,7 @@ trait GithubRoutes extends GithubHttpExceptionHandler {
 
   implicit val system: ActorSystem[Nothing]
   val githubClient: GithubClient
+  val cacheSettings: CacheSettings
 
   /**
    * cache creating with lfu(Least Frequently Used) algorithm
@@ -31,10 +33,10 @@ trait GithubRoutes extends GithubHttpExceptionHandler {
   val defaultCachingSettings: CachingSettings = CachingSettings(system)
   val lfuCacheSettings: LfuCacheSettings = //Minimum use of exclusion algorithm cache
     defaultCachingSettings.lfuCacheSettings
-      .withInitialCapacity(128) //Starting unit
-      .withMaxCapacity(1024) //Maximum Unit
-      .withTimeToLive(1.hour) //Maximum retention time
-      .withTimeToIdle(30.minutes) //Maximum Unused Time
+      .withInitialCapacity(cacheSettings.initialCapacity) //Starting unit
+      .withMaxCapacity(cacheSettings.maxCapacity) //Maximum Unit
+      .withTimeToLive(cacheSettings.timeToLive.minutes) //Maximum retention time
+      .withTimeToIdle(cacheSettings.timeToIdle.minutes) //Maximum Unused Time
   val cachingSettings: CachingSettings =
     defaultCachingSettings.withLfuCacheSettings(lfuCacheSettings)
 
