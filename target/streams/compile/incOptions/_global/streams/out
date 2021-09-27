@@ -7,6 +7,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$2$$anon$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$4$$anon$7.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$$anonfun$simpleKeyer$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$1$$anon$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$5$$anon$8.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$3.class[0m
@@ -16,7 +17,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$3.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	HttpServer.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$2.class[0m
@@ -28,6 +28,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$2$$anon$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$4$$anon$7.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$$anonfun$simpleKeyer$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$1$$anon$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$5$$anon$8.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$3.class[0m
@@ -37,7 +38,28 @@
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$3.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	HttpServer.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$2$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$3$$anon$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$3$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$2$$anon$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$4$$anon$7.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$$anonfun$simpleKeyer$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$1$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$5$$anon$8.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$6$$anon$9.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$1$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$15$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GithubRoutes$anon$importedEncoder$macro$11$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/rkhar/Desktop/own/scalac-tech-task/target/scala-2.13/classes.bak[0m

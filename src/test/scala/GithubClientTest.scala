@@ -14,8 +14,6 @@ import scala.concurrent.duration.DurationInt
 
 class GithubClientTest extends AnyWordSpec with ScalatestRouteTest with Matchers with ScalaFutures with GithubRoutes {
 
-  val repositories = List("json-tools", "lift-rest-demo", "mvn-repo", "akka-persistence-eventsourcing", "tricity-sug", "git-training-ug", "devoxx-android", "galaxy-gear2-tutorial", "warsjawa-2014", "reactive-rabbit", "rough-slick", "scala-slack-bot", "MFRC522-python", "recru-app", "scalac-branding-svg", "akka-message-visualization", "spark-kafka-avro", "scala-slack-bot-core", "reactive-slick", "websocket-akka-http", "cljs-on-gh-pages", "octopus-on-wire", "wsug-akka-websockets", "planet.clojure", "WhoSaidThat", "macro-fun", "docker-jira", "docker-java8", "docker-activator", "docker-postgres")
-
   lazy val testKit: ActorTestKit = ActorTestKit.create()
 
   override val log: Logger = LoggerFactory.getLogger(getClass)
@@ -37,15 +35,6 @@ class GithubClientTest extends AnyWordSpec with ScalatestRouteTest with Matchers
   override val githubClient: GithubClient = new GithubClient(githubUrl, githubSize, githubToken)
 
   "github routes" should {
-    "return ok" in {
-      val request = HttpRequest(uri = "/hesp")
-
-      request ~> githubRoutes ~> check {
-        status should ===(StatusCodes.OK)
-
-        contentType should ===(ContentTypes.`application/json`)
-      }
-    }
 
     "return first at most 100 repositories of scalaconsultants (GET /orgs/some_org/repos)" in {
       val request = HttpRequest(uri = "/orgs/scalaconsultants/repos")
